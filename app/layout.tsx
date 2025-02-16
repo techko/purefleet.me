@@ -6,6 +6,16 @@ import Footer from "./components/Footer";
 import { ModalProvider } from "./context/ContactModalContext";
 import Modal from "./components/ContactModal";
 
+import { GoogleTagManager } from '@next/third-parties/google'
+
+export default function RootLayout({children}: {children: React.ReactNode}) {
+    return (
+        <html lang="en">
+            <body>{children}</body>
+            <GoogleTagManager gtmId="GTM-N67Z5WC8" />
+        </html>
+     )
+}
 
 export default function RootLayout({
   children,
