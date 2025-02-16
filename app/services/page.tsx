@@ -8,7 +8,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | Pure Fleet",
   description:
-    "Discover a range of professional mobile car cleaning services offered by Pure Fleet. From basic washes to full detailing, we have you covered.",
+    "Discover a range of professional Window Tinting, PPF & Car Detailing services offered by Pure Fleet. From basic washes to full detailing, we have you covered.",
   keywords: "mobile car cleaning services, Pure Fleet, car wash, car detailing",
   authors: [{ name: "Pure Fleet" }],
   openGraph: {
