@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ModalProvider } from "./context/ContactModalContext";
 import Modal from "./components/ContactModal";
-import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function RootLayout({
   children,
@@ -22,7 +21,6 @@ export default function RootLayout({
           <Modal />
         </ModalProvider>
       </body>
-      <GoogleTagManager gtmId="GTM-N67Z5WC8" />
     </html>
   );
 }
