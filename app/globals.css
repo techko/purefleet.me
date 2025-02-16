@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "FF Mark";
+  src: local("FF Mark Book"), local("FF-Mark-Book"),
+    url("../public/fonts/Mark-Book.woff2") format("woff2"),
+    url("../public/fonts/Mark-Book.woff") format("woff"),
+    url("../public/fonts/Mark-Book.ttf") format("truetype");
+}
+
+:root {
+  --primary: 0, 0, 0;
+  --secondary: 255, 255, 255;
+  --accent: 235, 199, 96;
+  --gray-1: 18, 18, 18;
+  --gray-2: 5, 6, 6;
+  --gray-3: 34, 26, 21;
+  --gray-4: 179, 179, 179;
+  --gray-5: 23, 23, 23;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "FF Mark" !important;
+  overflow-x: hidden;
+}
+
+.nav-link {
+  @apply relative text-lg text-secondary cursor-pointer transition-all duration-200 ease-in-out;
+}
+
+.nav-link:hover {
+  @apply text-accent;
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+  background-color: rgb(var(--accent));
+}
+
+.active-nav {
+  @apply font-bold text-accent;
+}
+
+.active-nav::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  bottom: -16px;
+  left: 0;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(var(--secondary));
+  bottom: -16px;
+  left: 0;
+  opacity: 0;
+}
+
+.overlay__service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  mix-blend-mode: color;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+.input {
+  @apply lg:w-[500px] w-full bg-transparent text-gray-4 lg:text-[24px] text-[18px] lg:py-[6px] py-[4px] px-[16px] lg:px-[20px] border-2 border-gray-4 rounded-full focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+}
+
+.btn {
+  @apply cursor-pointer lg:py-[12px] py-[10px] rounded-full lg:px-11 px-[41px] lg:text-[22px] text-[18px] tracking-widest font-bold uppercase text-primary bg-secondary hover:bg-accent transition-all ease-in-out duration-200;
+}
