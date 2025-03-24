@@ -239,6 +239,14 @@ const ContactForm: React.FC = () => {
                       Saturday:
                     </p>
                     <span className="text-accent uppercase text-[18px] lg:text-[24px]">
+                      8am - 4pm
+                    </span>
+                  </div>
+                  <div className="">
+                    <p className="text-secondary uppercase text-[18px] lg:text-[24px]">
+                      Sunday:
+                    </p>
+                    <span className="text-accent uppercase text-[18px] lg:text-[24px]">
                       8am - 2pm
                     </span>
                   </div>
